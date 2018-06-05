@@ -1,0 +1,127 @@
+.filter-link{
+    position: relative;
+    font-style: normal;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.filter-link--active{
+    color: #17acf8;
+    .material-icons{
+        transform: rotate(180deg);
+        @include transition();
+        fill: #17acf8;
+    }
+}
+
+.filter-model{
+    position: absolute;
+    //width: 300px;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    padding: 15px;
+    visibility: hidden;
+    z-index: 99;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    @include breakpoint(small){
+        width: 420px;
+        height: 180px;
+        padding: 25px;
+        right: 0;
+        background-color: #ffffff;
+        cursor: default;
+    }
+}
+.filter-show{
+    visibility: visible;
+}
+.filter-model__head{
+    font-size: rem(16);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.filter-model__search{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+.filter-model__search-input{
+    border: none;
+    //color: #bbb;
+    outline: none;
+}
+.filter-model__select{
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    margin-bottom: 20px;
+    outline: none;
+}
+.filter-model__radio{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+.filter-model__radio-label{
+    text-transform: capitalize;
+    margin:0 15px 0 5px;
+    :last-of-type{
+        margin:0 0px 0 5px;
+    }
+}
+.filter-model__btn{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+.mdc-select{
+    width: 100%;
+}
+
+.mdc-text-field__input {
+    width: 180px;
+    height: 40px;
+    border-radius: 35px;
+    background-color: #ffffff;
+    border: solid 1px #c4c4c4;
+    display: flex;
+    opacity: 0.5;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.92;
+    letter-spacing: normal;
+    text-align: left;
+    color: #414141;
+}
+
+.wrapper2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mdc-button {
+    width: 99.6px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #17acf8;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);
+    font-family: SourceSansPro;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.date-wrapper {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}

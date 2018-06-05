@@ -1,0 +1,249 @@
+// .button-wrapper{
+//     @include breakpoint(small){
+//         margin-right: -16px;
+//         margin-left: -16px;
+//     }
+// }
+// .button {
+//     color: rgba(#000, .54);
+//     min-width: 64px;
+//     padding: 0 16px;
+//     border: none;
+//     outline: none;
+//     background: transparent;
+//     font-size: 14px;
+//     font-weight: 400;
+//     letter-spacing: .04em;
+//     line-height: 36px;
+//     text-align: center;
+//     text-decoration: none;
+//     display: inline-flex;
+//     align-items: center;
+//     overflow: hidden;
+//     cursor: pointer;
+//     @include transition();
+//     &[disabled] {
+//         color: rgba(0, 0, 0, .26);
+//         cursor: default;
+//     }
+
+//     &--outline{
+//         border: 1px solid ;
+//     }
+//     &--raised {
+//         box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+//         &[disabled] {
+//             box-shadow: none;
+//             color: rgba(0, 0, 0, .26);
+//         }
+//     }
+
+//     &--white {
+//         background-color: #fff;
+//     }
+
+//     &--light{
+//         color: #c2c2c1;
+//     }
+
+//     &--primary {
+//         background-color: $color-primary;
+//         color: #fff;
+//     }
+
+//     &--secondary {
+//         background-color: $color-secondary;
+//         color: egba(#000, .87)
+//     }
+
+//     &:hover{
+//         background-color: $color-primary;
+//         color: #fff;
+//         text-decoration: none;
+//     }
+    
+// }
+
+// .button--icon{
+//     text-transform: uppercase;
+//     &:hover{
+//         background-color: transparent;
+//         color: inherit;
+//         .button__icon{
+//             background-color: $color-grey;
+//             svg{
+//                 fill: $color-grey-900;
+//             }
+//         }
+//     }
+// }
+// .button__icon{
+//     width: 32px;
+//     height: 27px;
+//     padding: 5px;
+//     display: flex;
+//     background-color: $color-primary;
+//     margin-#{$left}: rem(16);
+//     > svg{
+//         max-width: 100%;
+//         max-height: 100%;
+//         fill: #fff;
+//         @include transition();
+//     }
+// }
+
+.btn {
+  border: none;
+  color: $color-white;
+  border-radius: rem(35);
+  background-color: #fff;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);
+  color: #000;
+  cursor: pointer;
+  font-family: $font-family;
+  padding:rem(3) rem(30) rem(2.8) rem(30);
+  &--h-50{
+    height: 50px;
+  }
+  &--h-40{
+    height: 40px;
+  }
+  &--full-width{
+    width: 100%;
+  }
+}
+
+.btn-grey{
+  background-color: $color-grey;
+  color: $dark-grey;
+  font-size: rem(15);
+  height: 40px;
+  width: 150px;
+  margin-top: 8px;
+  color: #fff;
+}
+
+.btn-submit {
+  background: $color-primary1;
+  width: 100%;
+  height: rem(50);
+  margin: rem(16) 0;
+  color: $color-white;
+  line-height: 1.25;
+  font-size: rem(20);
+}
+
+.btn-deactivate {
+  background: $color-grey;
+  font-size: rem(14);
+  height: rem(30);
+  // margin-right: rem(25);
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);
+  color: #fff;
+}
+
+.btn-primary {
+  background: $light-blue;
+  font-size: rem(14);
+  height: rem(30);
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);
+  margin-top: rem(20);
+  margin-bottom: rem(20);
+  //margin-left: rem(30);
+  color: #fff;
+  &--top-0{
+    margin-top: 0;
+  }
+  @include breakpoint(x-small){
+    margin-top: 10px;
+  }
+}
+
+.btn-secondary {
+  background: $color-primary1;
+  font-size: rem(14);
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);
+  margin-top: rem(20);
+  margin-bottom: rem(20);
+  color: #fff;
+}
+
+.btn-blank {
+  background: transparent;
+  margin-top: rem(20);
+  margin-bottom: rem(20);
+  color: #fff;
+  color: #000;
+  box-shadow: 0 0 0 0;
+}
+
+.btn-border{
+  border: solid 1px #c4c4c4;
+  margin-top: rem(20);
+  margin-bottom: rem(20);
+  height: 40px;
+  width: 75px;
+}
+
+.btn-m-top{
+  margin-top: 0;
+}
+
+.btn--lg{
+  width: 445px;
+  height: 50px;
+}
+
+// .container {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+.btn--lg2 {
+  width: 100%;
+  height: 50px;
+}
+
+.btn-primary2 {
+  background: $light-blue;
+  font-size: rem(14);
+  height: 50px;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);
+  margin-top: rem(20);
+  font-size: 20px;
+  color: #ffffff;
+  &--top-0{
+    margin-top: 0;
+  }
+}
+
+.btn--lg3 {
+  width: 220px;
+  height: 30px;
+}
+
+.btn-close {
+  padding: 0;
+  width: rem(22);
+  height: rem(22);
+  line-height: rem(22);
+  background-color: $color-grey;
+  box-shadow: 0 1px 3px 0 rgba(49, 49, 49, 0.35);
+  font-size: rem(17);
+  color: $color-white;
+}
+
+
+// button {
+//   width: 442.6px;
+//   height: 50px;
+//   border-radius: 35px;
+//   background-color: #17acf8;
+//   box-shadow: 0 3px 6px 0 rgba(46, 28, 28, 0.35);
+//   font-size: 20px;
+//   text-align: center;
+//   color: #ffffff;
+//   margin-bottom: 200px;
+//   cursor: pointer;
+// }

@@ -1,0 +1,57 @@
+.appointment-popup {
+  width:20.3%;
+  padding: 10px;
+  height: 100vh;
+  background: $color-white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  box-shadow: -3px 0 11px 0 rgba(0, 0, 0, 0.16);
+  overflow-x: hidden;
+  @include translate(20px, 0);
+  @include transition();
+}
+
+.appointment-popup-open {
+  opacity: 1;
+  visibility: visible;
+  @include translate(0, 0);
+}
+
+.appointment-popup__header {
+  font-size: rem(20.5);
+  line-height: 3.3;
+  font-weight: normal;
+  color: $color-primary2;
+}
+
+.appointment-popup__date {
+  font-size: rem(16);
+  text-align: center;
+  color: #606060;
+}
+
+.appointment-popup__info {
+  margin: rem(22) auto;
+  color: $color-primary2;
+  font-size: rem(14);
+}
+
+.appointment-popup__info--pink {
+  color: $color-primary1;
+}
+
+.appointment-popup__patient-list {
+  padding: 0;
+
+  & > li {
+    display: block;
+  }
+}
+
+.appointment-popup__footer {
+  margin-top: rem(10);
+}

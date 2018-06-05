@@ -1,0 +1,23 @@
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single {
+  border-radius: 20px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: rem(14);
+  border-radius: 50px;
+}
+
+.select2 .select2-container .select2-container--default .select2-container--above .select2-container--focus {
+  width: 100%;
+  outline: none;
+}
+
+.select-h {
+  line-height: 2.5;
+}
+
+/*# sourceMappingURL=../maps/modules/select2-model.css.map */

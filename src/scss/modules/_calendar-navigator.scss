@@ -1,0 +1,36 @@
+.calendar-navigator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-navigator--locations {
+  width: 20%;
+  font-size: rem(28);
+  color:  #7a7a7c;
+}
+
+.calendar-navigator--dates {
+  // width: 100%;
+  font-size: rem(17);
+  font-weight: bold;
+  color:  $color-primary2;
+}
+
+.calendar-navigator__arrow--lg {
+  width: rem(17);
+  height: rem(17);
+  fill:  #7a7a7c;
+  cursor: pointer;
+}
+
+.calendar-navigator__arrow--sm {
+  width: rem(12.5);
+  height: rem(12.5);
+  fill:  #7a7a7c;
+  cursor: pointer;
+}
+
+.calendar-navigator__arrow--disable {
+  opacity: .5;
+}

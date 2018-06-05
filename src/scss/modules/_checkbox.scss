@@ -1,0 +1,93 @@
+﻿
+.mdc-checkbox {
+    position: relative;
+}
+
+.mdc-checkbox2 {
+    position: relative;
+}
+
+.mdc-checkbox label {
+  display: inline-block;
+        //font-size: 14px;
+        // line-height: $md-checkbox-size;
+        font-weight: normal;
+        min-height: 13px;
+        padding-left: rem(30);
+
+        &:before, &:after {
+            content: "";
+            @include abs-pos(0, auto, auto, 0);
+        }
+
+        &:before {
+            // box
+            width: rem(20);
+            height: rem(20);
+            background: $color-white;
+            border: 1px solid #9b9b9b;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background .5s;
+        }
+
+        &:after {
+            // checkmark
+        }
+    }
+
+    .mdc-checkbox--pink label:before {
+      border: 2px solid rgba($color-primary1, 0.6);
+    }
+
+    .mdc-checkbox2 label {
+        display: inline-block;
+              //font-size: 14px;
+              // line-height: $md-checkbox-size;
+              font-weight: normal;
+              min-height: 13px;
+              padding-left: rem(35);
+      
+              &:before, &:after {
+                  content: "";
+                  @include abs-pos(0, auto, auto, 0);
+              }
+      
+              &:before {
+                // box
+                width: 25px;
+                height: 25px;
+                border-radius: 4px;
+                background-color: #ffffff;
+                border: solid 1px #9b9b9b;
+                cursor: pointer;
+                transition: background .5s;
+              }
+      
+              &:after {
+                  // checkmark
+              }
+          }
+
+    input[type="checkbox"] {
+        outline: 0;
+        @include abs-pos(0, auto, auto, 0);
+        // width: $md-checkbox-size;
+        // margin: 0;
+        // opacity: 0;
+
+        &:checked {
+            + label:before {
+              background: url(../images/check.svg) #fff no-repeat center center;
+              background-size: 100%;
+            }
+        }
+    }
+    .checkbox {
+        display: flex;
+        align-items: center;
+    }
+    .checkbox-option {
+        margin-right: 20px;
+        font-size: 15px;
+    }

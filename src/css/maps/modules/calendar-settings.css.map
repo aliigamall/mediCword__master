@@ -1,0 +1,1 @@
+{"version":3,"sources":["calendar-settings.css"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,mBAAmB;CACpB","file":"modules/calendar-settings.css","sourcesContent":[".calendar-block__head {\n  color: #606060;\n  font-size: rem(15);\n}\n"],"sourceRoot":"/source/"}

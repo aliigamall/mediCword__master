@@ -1,0 +1,29 @@
+.charts-container{
+    position: relative;
+}
+
+.charts-container__title2{
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+.charts-container__title1{
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.charts-container__title-percent{
+    font-size: rem(57);
+    color: $color-light-blue;
+    margin: 0;
+    &--grey{
+        color: $color-grey;
+    }
+}
+
+.charts-container__title-text{
+    font-size: rem(15);
+    color: $color-text;
+}

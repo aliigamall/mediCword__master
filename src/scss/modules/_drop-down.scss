@@ -1,0 +1,30 @@
+.drop-down {
+  font-size: rem(14);
+  line-height: 1.67;
+  color: $dark-grey;
+  width: rem(210);
+  // height: rem(290);
+  background: $color-white;
+  padding: 0;
+  // position: absolute;
+  // z-index: 2;
+  // right: 0;
+}
+
+.drop-down__item {
+  display: block;
+  padding: rem(10) 0 rem(10) rem(15);
+  cursor: pointer;
+  border-left: 5px solid transparent;
+  transition: all .2s ease-in-out;
+}
+
+.drop-down__item:hover {
+  background: $light-blue;
+  color: $color-white;
+  border-left: 5px solid $dark-blue;
+}
+
+.drop-down-header {
+  margin-top: 20px;
+}

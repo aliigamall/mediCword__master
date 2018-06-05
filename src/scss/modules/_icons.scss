@@ -1,0 +1,126 @@
+
+.icon2 {
+    display: inline-flex;
+    padding-right: 10px;
+    border-radius: 50%;
+    @include transition();
+
+    > svg {
+        fill: #00d508;
+        width: 24px;
+        height: 24px;
+    }
+
+}
+
+.icon-pdf {
+    cursor: pointer;
+
+    > svg {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+    }
+
+}
+
+.icon-add {
+    cursor: pointer;
+    display: inline-flex;
+    padding: $icons-padding;
+    border-radius: 50%;
+    @include transition();
+
+    > svg {
+        fill: #414141;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.icon-add2 {
+    cursor: pointer;
+    display: inline-flex;
+    padding: $icons-padding;
+    border-radius: 50%;
+    @include transition();
+    
+    > svg {
+        fill: #17acf8;
+        width: 30px;
+        height: 30px;
+        background: #175eb6;
+        border-radius: 50%;
+    }
+}
+
+.icon-camera {
+    cursor: pointer;
+    display: inline-flex;
+    padding: $icons-padding;
+    border-radius: 50%;
+    @include transition();
+    background: #fc1298;
+    width: 90px;
+    height: 90px;
+    > svg {
+        fill: #fc1298;
+        border-radius: 50%;
+        margin: 25px;
+    }
+}
+
+.download-icon-wrapper {
+    width: 237px;
+    height: 200px;
+    display: block;
+    padding-top: 45px;
+    border: solid 1px #fc1298;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.download-icon {
+    cursor: pointer;
+    margin: 0 90px 45px;
+    >svg{
+        fill: #fc1298;
+    }
+}
+
+.upload-icon-wrapper {
+    width: 237px;
+    height: 200px;
+    display: block;
+    padding-top: 45px;
+    border: solid 1px #0595ff;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.upload-icon {
+    cursor: pointer;
+    margin: 0 90px 45px;
+    >svg{
+        fill: #0595ff;
+    }
+}
+
+.download-icon-text {
+    text-align: center;
+    margin-top: 45px;
+    font-size: 14px;
+    padding: 0 30px;
+}
+
+.add-wrapper {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.add-icon-text {
+    color: #17acf8;
+    margin-left: 5px;
+}

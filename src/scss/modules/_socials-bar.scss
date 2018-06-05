@@ -1,0 +1,33 @@
+.socials-bar{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    margin-right: #{-$icons-padding};
+    margin-left: #{-$icons-padding};
+}
+
+.socials-bar__item{
+    +.socials-bar__item{
+        @supports (margin-inline-start: 10px) {
+            margin-inline-start: $icons-padding;
+        }
+        @supports not (margin-inline-start: 10px) {
+            margin-#{$left}: $icons-padding;
+        }
+    }
+}
+
+.brief {
+    width: 710px;
+    height: 113px;
+    font-family: Roboto;
+    font-size: 21px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: center;
+    color: #414141;
+    margin-top: 120px
+}

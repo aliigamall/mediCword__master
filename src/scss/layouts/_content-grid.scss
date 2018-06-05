@@ -1,0 +1,15 @@
+.container-right{
+    display: flex;
+    justify-content: flex-end;
+}
+.l-text-center{
+    text-align: center;
+}
+.l-col-0{
+    padding: 0;
+}
+.l-f-w-sm{
+    @include breakpoint(isMobile){
+        width: 100%;
+    }
+}

@@ -1,0 +1,34 @@
+.cover-img-left {
+  height: 100vh;
+  background: url("../images/register-doctor.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cover-img-left--login{
+  background: url("../images/login-doctor.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cover-img-left--medical-center{
+  height: 100vh;
+  background: image-set(url("../images/login-doctor-image.png") 1x, url("../images/login-doctor-image@2x.png") 2x, url("../images/login-doctor-image@3x.png") 3x);
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+.cover-img-left__p{
+  text-align: center;
+  width: 80%;
+}
+
+.cover-img-left__brand {
+  width: rem(323.3);
+  height: rem(49);
+  margin-bottom: 20%;
+}

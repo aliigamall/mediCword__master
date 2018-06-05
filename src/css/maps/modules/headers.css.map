@@ -1,0 +1,1 @@
+{"version":3,"sources":["headers.css"],"names":[],"mappings":"AAAA;EACE,qBAAc;EAAd,qBAAc;EAAd,cAAc;EACd,yBAAwB;EAAxB,sBAAwB;EAAxB,wBAAwB;CACzB","file":"modules/headers.css","sourcesContent":[".centered-header {\n  display: flex;\n  justify-content: center;\n}\n"],"sourceRoot":"/source/"}

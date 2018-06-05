@@ -1,0 +1,15 @@
+.register-login {
+  margin: rem(15) rem(70) 0 rem(70);
+}
+
+.register-title {
+  margin-bottom: rem(25);
+  text-align: center;
+}
+
+.register-login__footer {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=../maps/modules/s-form.css.map */
