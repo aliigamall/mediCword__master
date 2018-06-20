@@ -29,6 +29,14 @@
   padding-right: 0;
 }
 
+.u-pr-50 {
+  padding-right: 50px;
+}
+
+.u-mt-3 {
+  margin-top: rem(15);
+}
+
 .u-light-blue {
   color: $light-blue;
 }
@@ -47,4 +55,15 @@
 
 .u-text-bold {
   font-weight: bold;
+}
+
+// .rateYo{
+//   svg{
+//     stroke: #999;
+//     stroke-width: 20px;
+//   }
+// }
+
+.is-show{
+  display: flex;
 }

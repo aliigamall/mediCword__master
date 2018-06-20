@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#000" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>MediCrowd - Login</title>
   <link id="favicon" rel="shortcut icon" href="src/images/favicon.png" type="image/png">
   <link rel="stylesheet" href="src/css/style.css">
@@ -14,7 +13,7 @@
 
 <body>
   <main>
-    <div class="row">
+    <div class="row l-row-0">
 
       <!-- start cover image -->
       <div class="d-none d-md-block col-md-5 u-pl-0">
@@ -28,30 +27,48 @@
       <!-- end cover image -->
 
       <!-- start login form -->
-      <div class="col-md-7 l-form l-form--flex">
+      <div class="col-md-7 l-form l-form">
         <form class="form">
           <div class="login-header">
               <h2 class="typo-display1">LOGIN</h2>
               <p> Welcome back, please login to use your account.</p>
           </div>
 
-          <div class="l-form-group">
-              <label>Your Email</label>
-              <input type="email" class="form__input" placeholder="youremail@mail.com">
+          <div>
+            <label>Your Email</label>
+            <input type="text" class="form__input full-width form__input h-50" placeholder="youremail@mail.com">
           </div>
 
           <div class="l-form-group">
             <label>Password</label>
-            <div class="form__input form__input--password">
+            <div class="form__input form__input--password h-50">
               <input type="password" id="password" placeholder="Enter your password">
-              <i class="fa fa-eye password__eye-icon" onclick="showPassword()"></i>
+              <i class="password__eye-icon" >
+                <svg xmlns="http://www.w3.org/2000/svg" onclick="showPassword()" id="iconVisibl" class="">
+                  <use xlink:href="src/images/svg-icons2.svg#icon-visibility"></use>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" onclick="showPassword()" id="iconHidden" class="is-hidden">
+                  <use xlink:href="src/images/svg-icons2.svg#icon-hidden"></use>
+                </svg>
+              </i>
             </div>
           </div>
 
+          
+
           <div class="l-form-group l-form-group--flex">
-            <div class="mdc-checkbox mdc-checkbox--pink">
-              <input type="checkbox" id="checkBox">
-              <label for="checkBox" class="u-color-primary">Remember Me</label>
+            <div class="mdc-form-field m-b">
+              <div class="mdc-checkbox">
+                <input type="checkbox" id="attachements-checkbox" class="mdc-checkbox__native-control">
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+              </div>
+
+              <label for="attachements-checkbox" class="color-pink">Remember Me</label>
             </div>
             <a href="#">Forget your password?</a>
           </div>

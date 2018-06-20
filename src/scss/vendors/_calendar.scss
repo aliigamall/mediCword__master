@@ -425,7 +425,7 @@ temporary rendered events).
   // padding-top: rem(10);
   // padding-left: rem(10);
   text-align: center;
-  margin-top: rem(5);
+  margin-top: rem(3);
 }
 
 /* resizer (cursor AND touch devices) */
@@ -670,6 +670,10 @@ TODO: more distinction between this file and common.css
 
 .fc-unthemed .fc-popover .fc-header .fc-close {
   color: #666; }
+
+.fc-widget-content {
+  cursor: pointer;
+}
 
 /* .fc-unthemed td.fc-today {
   background: #fcf8e3; } */

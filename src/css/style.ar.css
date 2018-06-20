@@ -77,10 +77,6 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-@-ms-viewport {
-  width: device-width;
-}
-
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
@@ -273,7 +269,6 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: .5rem;
 }
 
 button {
@@ -414,7 +409,7 @@ template {
 }
 
 .typo-display4 {
-  font-size: 1.3125rem;
+  font-size: 1.0625rem;
   line-height: 1.38;
   color: #414141;
   margin-bottom: 0.625rem;
@@ -434,7 +429,7 @@ template {
 
 .typo-display7 {
   font-size: 0.75rem;
-  line-height: 1.79;
+  line-height: 2.3;
   color: #414141;
 }
 
@@ -2483,6 +2478,14 @@ template {
   padding-right: 0;
 }
 
+.u-pr-50 {
+  padding-right: 50px;
+}
+
+.u-mt-3 {
+  margin-top: 0.9375rem;
+}
+
 .u-light-blue {
   color: #0595ff;
 }
@@ -2501,6 +2504,12 @@ template {
 
 .u-text-bold {
   font-weight: bold;
+}
+
+.is-show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*# sourceMappingURL=maps/style.ar.css.map */

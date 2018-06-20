@@ -10,11 +10,18 @@
   color:  #7a7a7c;
 }
 
-.calendar-navigator--dates {
+.calendar-navigator--time {
   // width: 100%;
   font-size: rem(17);
   font-weight: bold;
   color:  $color-primary2;
+}
+
+.calendar-navigator--date {
+  width: 70%;
+  margin-bottom: 15px;
+  font-size: rem(15);
+
 }
 
 .calendar-navigator__arrow--lg {

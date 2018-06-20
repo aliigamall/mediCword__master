@@ -34,11 +34,6 @@ html {
 }
 
 // IE10+ doesn't honor `<meta name="viewport">` in some cases.
-@at-root {
-  @-ms-viewport {
-    width: device-width;
-  }
-}
 
 // stylelint-disable selector-list-comma-newline-after
 // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
@@ -332,7 +327,6 @@ th {
 label {
   // Allow labels to use `margin` for spacing.
   display: inline-block;
-  margin-bottom: .5rem;
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#000" />
-    <title>MediCrowd</title>
-    <link id="favicon" rel="shortcut icon" href="src/images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MediCrowd</title>
+  <link id="favicon" rel="shortcut icon" href="src/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
 
 <body>
 
@@ -132,173 +131,253 @@
       </header>
 
   <main>
-    <!-- start notifications drop down -->
-    <div class="popup__container is-hidden">
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">Today</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Patient Reviews</div>
-          <div class="popup__date">Yesterday</div>
-        </div>
-        <div class="popup__content">2 new patient reviews, you can check them and give your feedback</div>
-        <a href="#" class="popup__link">Read the reviews</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">10/6/2018</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">Today</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">Yesterday</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">Today</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-    </div>
-    <!-- end notifications drop down -->
-
-    <!-- start profile drop down -->
-    <div class="profile-drop-down is-hidden">
-      <ul class="drop-down">
-        <li class="drop-down__item">My Profile</li>
-        <li class="drop-down__item">Patients Reviews</li>
-        <li class="drop-down__item">Edit Password</li>
-        <li class="drop-down__item">My Specialities & Procedures</li>
-        <li class="drop-down__item">Added to Favorites </li>
-        <li class="drop-down__item">Logout</li>
-      </ul>
-    </div>
-    <!-- end profile drop down -->
-
-
     <div class="container-fluid">
       <ul class="breadcrumb">
         <li class="breadcrumb__item">
           <a href="">Dashboard</a>
         </li>
         <li class="breadcrumb__item breadcrumb__item--active">
-          <span>Patient Reviews</span>
+          <span>Complete Your Profile</span>
         </li>
       </ul>
-      <div class="page-title">
+      <div class="page-title page-title--bottom-pad">
         <div class="page-title__header">
-          <h2>Patient Review</h2>
+          <h2>Complete Your Profile</h2>
         </div>
-        <form class="form">
-          <div class="l-form-group">
-          <select name="" class="form__input flex-end">
-            <option value="">My Boston</option>
-            <option value="">Wyoming</option>
-          </select>
+        <div class="breadcrumb-text">
+          <p>Saving …</p>
+          <p>All changes are saved.</p>
+        </div>
+      </div>
+      <div class="panel">
+
+        <div class="panel__wrapper2">
+          <form class="md-text">
+            <label for="upload-photo" class="icon-camera">
+              <svg>
+                <use xlink:href="/src/images/svg-icons2.svg#icon-camera"></use>
+              </svg>
+            </label>
+            <input type="file" id="upload-photo" class="form__file-input">
+          </form>
+          <div class="wrapper4">
+            <div class="panel__content-wrapper">
+              <div class="header-wrapper3">
+                <div class="panel__title2">Dr. Footerage Pork</div>
+                <a class="icon-edit">
+                  <svg>
+                    <use xlink:href="/src/images/svg-icons2.svg#icon-edit2"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="header-wrapper3">
+                <div class="panel__breif2">Dentist</div>
+                <a class="icon-edit">
+                  <svg>
+                    <use xlink:href="/src/images/svg-icons2.svg#icon-edit2"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
-        </form>
+        </div>
+        <div class="wrapper4">
+          <div class="text__1">Gender: </div>
+          <div class="checkbox">
+            <div class="mdc-radio">
+              <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked="">
+              <div class="mdc-radio__background">
+                <div class="mdc-radio__outer-circle"></div>
+                <div class="mdc-radio__inner-circle"></div>
+              </div>
+            </div>
+            <label for="radio-1" class="checkbox-option">Male</label>
+          </div>
+          <div class="checkbox">
+            <div class="mdc-radio mdc-form-field">
+              <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios" checked="">
+              <div class="mdc-radio__background">
+                <div class="mdc-radio__outer-circle"></div>
+                <div class="mdc-radio__inner-circle"></div>
+              </div>
+            </div>
+            <label for="radio-2" class="checkbox-option">Female</p>
+          </div>
+        </div>
+
+          <form class="form">
+            <div class="l-form-group">
+              <label>Choose a language</label>
+              <select class="form__input form__input--lg form__input--h-40" required>
+                <option value="" disabled selected hidden>English</option>
+                <option value="My Boston">English</option>
+                <option value="My Boston">Arabic</option>
+                <option value="My Boston">French</option>
+              </select>
+
+              <div class="add-wrapper">
+                <div class="add-icon-container">
+                  <svg class="add__icon">
+                    <use xlink:href="src/images/svg-icons2.svg#icon-add"></use>
+                  </svg>
+                </div>
+                <p class="add-icon-text">Add another language</p>
+              </div>
+            </div>
+          </form>
+
+      </div>
+      <div class="panel">
+        <div class="panel__wrapper">
+          <div class="panel__content-wrapper2">
+            <h3 class="panel__title fs-31">My Experience</h3>
+            <form class="form">
+              <div class="l-form-group">
+                <label>Add Location</label>
+                <input type="text" class="form__input form__input--lg form__input--h-40" placeholder="Address Line1">
+                <input type="text" class="form__input form__input--lg form__input--h-40" placeholder="Address Line2">
+                <input type="text" class="form__input form__input--md form__input--h-40" placeholder="City">
+                <input type="text" class="form__input form__input--md form__input--h-40" placeholder="State/Province">
+                <input type="text" class="form__input form__input--md form__input--h-40" placeholder="Zip Code">
+                <input type="text" class="form__input form__input--lg form__input--h-40" placeholder="Give your location a name">
+
+                <div class="add-wrapper">
+                  <div class="add-icon-container">
+                    <svg class="add__icon">
+                      <use xlink:href="src/images/svg-icons2.svg#icon-add"></use>
+                    </svg>
+                  </div>
+                  <p class="add-icon-text">Add another Address</p>
+                </div>
+              </div>
+              <div class="l-form-group">
+                <label>Your ID Code</label>
+                <input type="text" class="form__input form__input--lg form__input--h-40" placeholder="8123612315">
+              </div>
+
+              <div class="mdc-form-field m-b">
+								<div class="mdc-checkbox">
+									<input type="checkbox" id="attachements-checkbox" class="mdc-checkbox__native-control">
+									<div class="mdc-checkbox__background">
+										<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+											<path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+										</svg>
+										<div class="mdc-checkbox__mixedmark"></div>
+									</div>
+								</div>
+
+								<label for="attachements-checkbox">Are you a board certified</label>
+							</div>
+
+              <div class="l-form-group">
+                <label>Choose a certificate</label>
+                <select class="form__input form__input--lg form__input--h-40" required>
+                  <option value="" disabled selected hidden>Choose a certificate</option>
+                  <option value="My Boston">certificate1</option>
+                  <option value="My Boston">certificate2</option>
+                  <option value="My Boston">certificate3</option>
+                </select>
+                <button class="btn btn-light-grey">Upload your certificate</button>
+              </div>
+
+              <div class="l-form-group">
+                <label>Years of Experience</label>
+                <div class="input-flex">
+                  <div class="col u-pl-0">
+                    <input type="text" class="form__input media-width form__input--h-40" placeholder="Years">
+                  </div>
+                  <div class="col u-pl-0">
+                    <input type="text" class="form__input media-width form__input--h-40" placeholder="months">
+                  </div>
+                </div>
+              </div>
+
+              <div class="l-form-group">
+                <label>Hosptial(s) Affiliation</label>
+                <input type="text" class="form__input form__input--lg form__input--h-40" placeholder="Add the hospital">
+                <div class="add-wrapper">
+                  <div class="add-icon-container">
+                    <svg class="add__icon">
+                      <use xlink:href="src/images/svg-icons2.svg#icon-add"></use>
+                    </svg>
+                  </div>
+                  <p class="add-icon-text">Add another Hospital</p>
+                </div>
+              </div>
+              <div class="l-form-group">
+                <label>Bio</label>
+                <textarea type="text" class="form__input form__input--lg form__textarea" placeholder="Add your Bio"></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
 
-    <div class="panel">
-      <div class="panel__wrapper">
-        <div>
-          <img src="src/images/USER.jpg" class="panel__image">
-        </div>
-        <div class="margin">
-          <h3 class="panel__title fs-25 panel__title--blue">Wonder Walf</h3>
-          <div class="panel__breif">The serivce overall is good somehow but it needs a more enhancement while the doctor is good and understand what does he is doing</div>
-          <a class="panel__action" href="#">Reply to feedback</a>
-        </div>
-        <div class="panel__rating-wrapper">
-          <div class="panel-rating">doctor's rating
-              <div class="rateYo"></div>
-          </div>
-          <div class="panel-rating">service's rating
-            <div class="rateYo"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="panel">
+      <div class="panel">
         <div class="panel__wrapper">
-          <div class="">
-              <img src="src/images/USER.jpg" class="panel__image">
-              <svg xmlns="http://www.w3.org/2000/svg" class="panel-icon" id="Layer_1" data-name="Layer 1" viewBox="0 0 50 48.1">
-                <path class="cls-1" d="M42.56,1.09A14.15,14.15,0,0,0,25,6.78,14.15,14.15,0,0,0,7.44,1.09C-4.44,5.44-4.44,27,25,48.1,54.44,27,54.44,5.44,42.56,1.09"/>
-              </svg>
-            </div>
-          <div class="margin">
-            <h3 class="panel__title fs-25 panel__title--blue">Jack Bolt</h3>
-            <div class="panel__breif">
-              <p>The serivce overall is good somehow but it needs a more enhancement while the doctor is good and understand what does he is doing The serivce overall is good somehow but it needs a more enhancement while the dos doing The serivce overall is good somehow but it needs a more enhancement while the doctor is good and understand what does he is doing The serivce overall is good somehow but it needs a more enhancement while the dos doing ds a more enhancement</p>
-            </div>
-            <a class="panel__action" href="#">Reply to feedback</a>
-          </div>
-          <div class="panel__rating-wrapper">
-            <div class="panel-rating">doctor's rating
-                <div class="rateYo"></div>
-            </div>
-            <div class="panel-rating">service's rating
-              <div class="rateYo"></div>
-            </div>
+          <div class="panel__content-wrapper2">
+            <h3 class="panel__title fs-31">Banking Information</h3>
+            <form class="form">
+              <div class="l-form-group">
+                <label>Your Full Name</label>
+                <input type="text" class="form__input form__input--lg form__input--h-40" placeholder="Footrage Park">
+              </div>
+
+              <div class="l-form-group">
+                <label>Choose your Bank</label>
+                <select class="form__input form__input--lg form__input--h-40" required>
+                  <option value="" disabled selected hidden>Choose a bank</option>
+                  <option value="My Boston">bank1</option>
+                  <option value="My Boston">bank2</option>
+                  <option value="My Boston">bank3</option>
+                </select>
+              </div>
+
+              <div class="l-form-group">
+                <label>Routing Number</label>
+                <input type="text" class="form__input form__input--lg form__input--h-40" placeholder="8712 612316">
+              </div>
+
+              <div class="l-form-group">
+                <label>Account Number</label>
+                <input type="text" class="form__input form__input--lg form__input--h-40" placeholder="9127 7123 8126 9191">
+              </div>
+            </form>
           </div>
         </div>
       </div>
       <div class="panel">
         <div class="panel__wrapper">
-          <div>
-            <img src="src/images/USER.jpg" class="panel__image">
-          </div>
-          <div class="margin">
-            <h3 class="panel__title fs-25 panel__title--blue">Wonder Walf</h3>
-            <div class="panel__breif">The serivce overall is good somehow but it needs a more enhancement while the doctor is good and understand what does he is doing</div>
-            <a class="panel__action" href="#">Reply to feedback</a>
-          </div>
-          <div class="panel__rating-wrapper">
-            <div class="panel-rating">doctor's rating
-                <div class="rateYo"></div>
+          <div class="panel__content-wrapper2">
+            <h3 class="panel__title fs-31">Upload Procedures</h3>
+            <p class="panel-text">Kindly download our excel sheet, fill it and reupload again with your price list.</p>
+            <div class="download-icon-wrapper">
+              <a class="download-icon">
+                <svg class="" width="50" height="50">
+                  <use xlink:href="/src/images/svg-icons2.svg#icon-download"></use>
+                </svg>
+              </a>
+              <p class="download-icon-text">Download the excel sheet</p>
             </div>
-            <div class="panel-rating">service's rating
-              <div class="rateYo"></div>
+            <p class="panel-text">Kindly upload your excel sheet if you updated with your price list.</p>
+            <div class="upload-icon-wrapper">
+              <a class="upload-icon">
+                <svg class="" width="50" height="50">
+                  <use xlink:href="/src/images/svg-icons2.svg#icon-upload"></use>
+                </svg>
+              </a>
+              <p class="download-icon-text width-180">Drag or click to upload the new sheet</p>
             </div>
           </div>
         </div>
       </div>
+      <button class="btn btn-submit btn-primary2 btn-primary2--top-0">Complete My Profile</button>
     </div>
   </main>
 
   <footer>
-    <div class="main-footer">
-      <ul class="typo-display5 u-text-center">
+    <div class="footer typo-display5">
+      <ul>
         <li>
           <a href="#">Terms of Use</a>
         </li>
@@ -319,13 +398,12 @@
           <a href="#">Get in Touch</a>
         </li>
       </ul>
-      <p class="typo-display5 u-text-center">Copyrights 2018, MediCrowd, All rights reserved.</p>
+      <p>Copyrights 2018, MediCrowd, All rights reserved.</p>
     </div>
   </footer>
-  <script src="/src/scripts/jquery.min.js"></script>
-  <script src="/src/scripts/jquery.rateyo.min.js"></script>
-  <script src="/src/scripts/scripts.js"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./src/scripts/scripts.js"></script>
+
 </body>
 
 </html>

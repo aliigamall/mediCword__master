@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#000" />
-    <title>MediCrowd</title>
-    <link id="favicon" rel="shortcut icon" href="src/images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#000" />
+  <title>MediCrowd</title>
+  <link id="favicon" rel="shortcut icon" href="src/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
 
 <body>
-
     <header>
         <nav class="nav-bar">
           <svg class="nav-bar__logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 148.919 22.638"
@@ -132,78 +130,6 @@
       </header>
 
   <main>
-    <!-- start notifications drop down -->
-    <div class="popup__container is-hidden">
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">Today</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Patient Reviews</div>
-          <div class="popup__date">Yesterday</div>
-        </div>
-        <div class="popup__content">2 new patient reviews, you can check them and give your feedback</div>
-        <a href="#" class="popup__link">Read the reviews</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">10/6/2018</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">Today</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">Yesterday</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">Today</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-    </div>
-    <!-- end notifications drop down -->
-
-    <!-- start profile drop down -->
-    <div class="profile-drop-down is-hidden">
-      <ul class="drop-down">
-        <li class="drop-down__item">My Profile</li>
-        <li class="drop-down__item">Patients Reviews</li>
-        <li class="drop-down__item">Edit Password</li>
-        <li class="drop-down__item">My Specialities & Procedures</li>
-        <li class="drop-down__item">Added to Favorites </li>
-        <li class="drop-down__item">Logout</li>
-      </ul>
-    </div>
-    <!-- end profile drop down -->
-
 
     <div class="container-fluid">
       <ul class="breadcrumb">
@@ -211,121 +137,172 @@
           <a href="">Dashboard</a>
         </li>
         <li class="breadcrumb__item breadcrumb__item--active">
-          <span>Patient Reviews</span>
+          <span>My Specialities & Procedures</span>
         </li>
       </ul>
       <div class="page-title">
         <div class="page-title__header">
-          <h2>Patient Review</h2>
+          <h2>My Specialities & Procedures</h2>
+          <form class="form u-mt-3">
+            <div class="l-form-group">
+            <div class="row">
+              <div class="col">
+                <select class="form__input form__input--h-40" name="state" aria-invalid="false">
+                  <option value="AL">My Boston</option>
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+              <div class="col">
+                <select class="form__input form__input--h-40" name="state">
+                  <option value="AL">Dentist</option>
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+            </div>
+            </div>
+          </form>
         </div>
-        <form class="form">
-          <div class="l-form-group">
-          <select name="" class="form__input flex-end">
-            <option value="">My Boston</option>
-            <option value="">Wyoming</option>
-          </select>
-          </div>
-        </form>
+        <p class="page-title__p">You uploaded the sheets on
+          <span>Wed March 8, 2018 - 8:10 am</span>
+        </p>
       </div>
 
-    <div class="panel">
-      <div class="panel__wrapper">
-        <div>
-          <img src="src/images/USER.jpg" class="panel__image">
-        </div>
-        <div class="margin">
-          <h3 class="panel__title fs-25 panel__title--blue">Wonder Walf</h3>
-          <div class="panel__breif">The serivce overall is good somehow but it needs a more enhancement while the doctor is good and understand what does he is doing</div>
-          <a class="panel__action" href="#">Reply to feedback</a>
-        </div>
-        <div class="panel__rating-wrapper">
-          <div class="panel-rating">doctor's rating
-              <div class="rateYo"></div>
-          </div>
-          <div class="panel-rating">service's rating
-            <div class="rateYo"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="panel">
-        <div class="panel__wrapper">
-          <div class="">
-              <img src="src/images/USER.jpg" class="panel__image">
-              <svg xmlns="http://www.w3.org/2000/svg" class="panel-icon" id="Layer_1" data-name="Layer 1" viewBox="0 0 50 48.1">
-                <path class="cls-1" d="M42.56,1.09A14.15,14.15,0,0,0,25,6.78,14.15,14.15,0,0,0,7.44,1.09C-4.44,5.44-4.44,27,25,48.1,54.44,27,54.44,5.44,42.56,1.09"/>
-              </svg>
-            </div>
-          <div class="margin">
-            <h3 class="panel__title fs-25 panel__title--blue">Jack Bolt</h3>
-            <div class="panel__breif">
-              <p>The serivce overall is good somehow but it needs a more enhancement while the doctor is good and understand what does he is doing The serivce overall is good somehow but it needs a more enhancement while the dos doing The serivce overall is good somehow but it needs a more enhancement while the doctor is good and understand what does he is doing The serivce overall is good somehow but it needs a more enhancement while the dos doing ds a more enhancement</p>
-            </div>
-            <a class="panel__action" href="#">Reply to feedback</a>
-          </div>
-          <div class="panel__rating-wrapper">
-            <div class="panel-rating">doctor's rating
-                <div class="rateYo"></div>
-            </div>
-            <div class="panel-rating">service's rating
-              <div class="rateYo"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- start procedures list -->
       <div class="panel">
-        <div class="panel__wrapper">
+        <div class="panel__header">
           <div>
-            <img src="src/images/USER.jpg" class="panel__image">
+            <p class="panel__title panel__title--md">My Procedures (Dentist)</p>
+            <p class="panel__sub-title">You are able to edit the price of the uploaded procedures</p>
           </div>
-          <div class="margin">
-            <h3 class="panel__title fs-25 panel__title--blue">Wonder Walf</h3>
-            <div class="panel__breif">The serivce overall is good somehow but it needs a more enhancement while the doctor is good and understand what does he is doing</div>
-            <a class="panel__action" href="#">Reply to feedback</a>
+
+          <div class="panel__header-btns">
+            <button class="btn btn-deactivate btn-deactivate--mr">Deactivate</button>
+            <button class="btn btn-primary">Upload new sheet</button>
           </div>
-          <div class="panel__rating-wrapper">
-            <div class="panel-rating">doctor's rating
-                <div class="rateYo"></div>
+        </div>
+
+        <div>
+          <div class="panel__procedure-list">
+            <div class="procedure-item">
+              <div class="procedure-item__name">
+                <div class="procedure-item__tag"></div>
+                <p>Bonding</p>
+              </div>
+              <p class="procedure-item__code">ANB712391</p>
+              <p class="procedure-item__price" contenteditable="true">$290</p>
             </div>
-            <div class="panel-rating">service's rating
-              <div class="rateYo"></div>
+
+            <div class="procedure-item">
+              <div class="procedure-item__name">
+                  <div class="procedure-item__tag procedure-item__tag--pink"></div>
+                  <p>Bridges and Implants</p>
+                </div>
+              <p class="procedure-item__code">SBS8126A</p>
+              <p class="procedure-item__price procedure-item__price--pink" contenteditable="true">$300</p>
+            </div>
+
+            <div class="procedure-item">
+              <div class="procedure-item__name">
+                <div class="procedure-item__tag procedure-item__tag--pink"></div>
+                <p>Braces</p>
+              </div>
+              <p class="procedure-item__code">SBS8126A</p>
+              <p class="procedure-item__price procedure-item__price--pink" contenteditable="true">$300</p>
+            </div>
+
+            <div class="procedure-item">
+              <div class="procedure-item__name">
+                <div class="procedure-item__tag procedure-item__tag--pink"></div>
+                <p>Crowns and Caps</p>
+              </div>
+              <p class="procedure-item__code">SBS8126A</p>
+              <p class="procedure-item__price procedure-item__price--pink" contenteditable="true">$300</p>
+            </div>
+
+            <div class="procedure-item">
+              <div class="procedure-item__name">
+                <div class="procedure-item__tag"></div>
+                <p>Extractions</p>
+              </div>
+              <p class="procedure-item__code">ANB712391</p>
+              <p class="procedure-item__price" contenteditable="true">$290</p>
+            </div>
+
+            <div class="procedure-item">
+              <div class="procedure-item__name">
+                <div class="procedure-item__tag"></div>
+                <p>Dentures</p>
+              </div>
+              <p class="procedure-item__code">ANB712391</p>
+              <p class="procedure-item__price" contenteditable="true">$290</p>
+            </div>
+
+            <div class="procedure-item">
+              <div class="procedure-item__name">
+                <div class="procedure-item__tag procedure-item__tag--pink"></div>
+                <p>Bridges and Implants</p>
+              </div>
+              <p class="procedure-item__code">SBS8126A</p>
+              <p class="procedure-item__price procedure-item__price--pink" contenteditable="true">$300</p>
+            </div>
+
+            <div class="procedure-item">
+              <div class="procedure-item__name">
+                <div class="procedure-item__tag procedure-item__tag--pink"></div>
+                <p>Braces</p>
+              </div>
+              <p class="procedure-item__code">SBS8126A</p>
+              <p class="procedure-item__price procedure-item__price--pink" contenteditable="true">$300</p>
+            </div>
+
+            <div class="procedure-item">
+              <div class="procedure-item__name">
+                <div class="procedure-item__tag procedure-item__tag--pink"></div>
+                <p>Crowns and Caps</p>
+              </div>
+              <p class="procedure-item__code">SBS8126A</p>
+              <p class="procedure-item__price procedure-item__price--pink" contenteditable="true">$300</p>
             </div>
           </div>
         </div>
+
       </div>
-    </div>
+      <div class="container-right">
+        <button class="btn btn--h-40 btn-blank">Don't Save</button>
+        <button class="btn btn--h-40 btn-secondary">Save my Changes</button>
+      </div>
+      <!-- end procedures list -->
   </main>
 
-  <footer>
-    <div class="main-footer">
-      <ul class="typo-display5 u-text-center">
-        <li>
-          <a href="#">Terms of Use</a>
-        </li>
-        <li> | </li>
-        <li>
-          <a href="#">Privacy Policy</a>
-        </li>
-        <li> | </li>
-        <li>
-          <a href="#">About MediCrowd</a>
-        </li>
-        <li> | </li>
-        <li>
-          <a href="#">FAQs</a>
-        </li>
-        <li> | </li>
-        <li>
-          <a href="#">Get in Touch</a>
-        </li>
-      </ul>
-      <p class="typo-display5 u-text-center">Copyrights 2018, MediCrowd, All rights reserved.</p>
-    </div>
+  <footer class="footer typo-display5">
+    <ul>
+      <li>
+        <a href="#">Terms of Use</a>
+      </li>
+      <li> | </li>
+      <li>
+        <a href="#">Privacy Policy</a>
+      </li>
+      <li> | </li>
+      <li>
+        <a href="#">About MediCrowd</a>
+      </li>
+      <li> | </li>
+      <li>
+        <a href="#">FAQs</a>
+      </li>
+      <li> | </li>
+      <li>
+        <a href="#">Get in Touch</a>
+      </li>
+    </ul>
+    <p>Copyrights 2018, MediCrowd, All rights reserved.</p>
   </footer>
-  <script src="/src/scripts/jquery.min.js"></script>
-  <script src="/src/scripts/jquery.rateyo.min.js"></script>
-  <script src="/src/scripts/scripts.js"></script>
-  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./src/scripts/scripts.js"></script>
+
 </body>
 
 </html>

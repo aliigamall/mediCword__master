@@ -30,152 +30,172 @@
 // });
 
 
-// $("#rateYo").rateYo({
-//   rating    : 2,
-//   numStars: 10,
-//   spacing   : "5px",
-//   normalFill: "#ddd",
-//   ratedFill  : "#fc1298",
-//   fullStar: true
+// stars rate
 
-//   });
+if ($(".rateYo").length > 0) {
+  $(".rateYo").rateYo({
+    rating: 4,
+    numStars: 5,
+    normalFill: "#ddd",
+    ratedFill: "#fc1298",
+    fullStar: true,
+    starWidth: "20px",
+    spacing: "8px"
 
+  });
+}
 
-// var randomScalingFactor = function() {
-// 	return Math.ceil(Math.random() * 10.0) * Math.pow(10, Math.ceil(Math.random() * 5));
-// };
+function kFormatter(num) {
+  if (num == null)
+    return num;
 
-// var config = {
-// 	type: 'line',
-// 	data: {
-// 		labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-// 		datasets: [{
-// 			label: 'My First dataset',
-// 			backgroundColor: 'red',
-// 			borderColor: 'red',
-// 			fill: false,
-// 			data: [3, 4, 34, 2, 34, 60, 46],
-// 		}, {
-// 			label: 'My Second dataset',
-// 			backgroundColor: window.chartColors.blue,
-// 			borderColor: window.chartColors.blue,
-// 			fill: false,
-// 			data: [0, 10, 5, 2, 20, 30, 45],
-// 		}]
-// 	},
-// 	options: {
-// 		responsive: true,
-// 		title: {
-// 			display: true,
-// 			text: 'Chart.js Line Chart - Logarithmic'
-// 		},
-// 		scales: {
-// 			xAxes: [{
-// 				display: true,
-// 			}],
-// 			yAxes: [{
-// 				display: true,
-// 				type: 'logarithmic',
-// 			}]
-// 		}
-// 	}
-// };
+  var formattedNum = null;
+  if ((num > 999 && num <= 999999) || (num < -999 && num >= -999999))
+    formattedNum = parseFloat(num / 1000).toFixed(1) + ' k';
+  else if ((num > 999999 && num <= 999999999 || num < -999999 && num >= -999999999))
+    formattedNum = parseFloat(num / 1000000).toFixed(1) + ' M';
+  else if ((num > 999999999 || num < -999999999))
+    formattedNum = parseFloat(num / 1000000000).toFixed(1) + ' bi';
+  else
+    formattedNum = parseFloat(num).toFixed(1);
+  return formattedNum;
+}
 
 
 // spline chart
 
-if($("#myChart").length > 0) {
+if ($("#myChart").length > 0) {
 
-	var ctx = document.getElementById('myChart').getContext('2d');
-	var purple_orange_gradient = ctx.createLinearGradient(0, 0, 0, 600);
-			purple_orange_gradient.addColorStop(0, '#fc1298');
-			purple_orange_gradient.addColorStop(1, '#175eb6');
-var chart = new Chart(ctx, {
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var purple_orange_gradient = ctx.createLinearGradient(0, 0, 0, 600);
+  purple_orange_gradient.addColorStop(0, '#fc1298');
+  purple_orange_gradient.addColorStop(1, '#175eb6');
+  var chart = new Chart(ctx, {
     // The type of chart we want to create
-		type: 'line',
-		
-		data: {
-			labels: ['jan 02', 'jan 04', 'jan 06', 'jan 08', 'jan 10', 'jan 12', 'jan 14' , 'jan 16', 'jan 18', 'jan 20', 'jan 22', 'jan'],
-			datasets: [{
-				backgroundColor: purple_orange_gradient,
-				hoverBackgroundColor: purple_orange_gradient,
-				fill: true,
-				data: [0, 4, 2, 6, 4, 3, 2, 4, 5, 2, 3, 0],
-			}]
-		},
+    type: 'line',
+
+    data: {
+      labels: ['jan 02', 'jan 04', 'jan 06', 'jan 08', 'jan 10', 'jan 12', 'jan 14', 'jan 16', 'jan 18', 'jan 20', 'jan 22', 'jan'],
+      datasets: [{
+        backgroundColor: purple_orange_gradient,
+        hoverBackgroundColor: purple_orange_gradient,
+        fill: true,
+        data: [0, 4, 2, 6, 4, 3, 2, 4, 5, 2, 3, 0],
+      }]
+    },
     // Configuration options go here
     options: {
-			legend: {
-				display: false,
-				position: 'top',
-			},
-			responsive: true,
-			scales: {
-				xAxes: [{
-					stacked: false,
-				}],
-			},
-			animation: {
-				animateScale: true,
-				animateRotate: true
-			}
-		}
-});
+      legend: {
+        display: false,
+        position: 'top',
+      },
+      tooltips: {
+        mode: 'index',
+        intersect: false,
+        backgroundColor: '#555',
+        titleFontColor: "#eee",
+        titleFontFamily: "'Roboto', sans-serif",
+        titleFontStyle: 'normal',
+        titleMarginBottom: 8,
+        titleFontSize: 11,
+        bodySpacing: 5,
+        bodyFontColor: '#eee',
+        bodyFontFamily: "'Roboto', sans-serif",
+        bodyFontSize: 10,
+        borderWidth: 1,
+        borderColor: 'rgba(0,0,0,0.08)',
+        caretSize: 0,
+        xPadding: 10,
+        yPadding: 10,
+        cornerRadius: 2,
+    },
+      responsive: true,
+      scales: {
+        xAxes: [{
+          gridLines: {
+            display: false
+          }
+        }],
+        yAxes: [{
+          gridLines: {
+            display: false
+          },
+          ticks: {
+            callback: function (value, index, values) {
+              return 'EGP ' + kFormatter(value);
+            },
+            fontSize: 10,
+            fontColor: "#333",
+          },
+        }]
+      },
+      animation: {
+        animateScale: true,
+        animateRotate: true
+      }
+    }
+  });
 
 
 }
-	
+
 
 // doughnut chart
-if($("#myChart2").length > 0) {
+if ($("#myChart2").length > 0) {
 
-	var ctx2 = document.getElementById('myChart2').getContext('2d');
-var chart2 = new Chart(ctx2, {
+  var ctx2 = document.getElementById('myChart2').getContext('2d');
+  var chart2 = new Chart(ctx2, {
     // The type of chart we want to create
-		type: 'doughnut',
-		
-		type: 'doughnut',
-		data: {
-			datasets: [{
-				data:[75 ,25],
-				backgroundColor: [
-					'#17acf8',
-					'#9b9b9b',
-				],
-			}],
-		},
-		options: {
-			cutoutPercentage: '80',
-		responsive: true,
-		legend: {
-			display: false,
-			position: 'top',
-		},
-		title: {
-			display: false,
-		},
-		animation: {
-			animateScale: true,
-			animateRotate: true
-		}
-	}
-});
+    type: 'doughnut',
+
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [75, 25],
+        backgroundColor: [
+          '#17acf8',
+          '#9b9b9b',
+        ],
+      }],
+      labels: [
+        'Cancelled Bookings',
+        'Confrimed Bookings',
+      ],
+    },
+    options: {
+      cutoutPercentage: '80',
+      responsive: true,
+      legend: {
+        display: false,
+        position: 'top',
+      },
+      title: {
+        display: false,
+      },
+      animation: {
+        animateScale: true,
+        animateRotate: true
+      }
+    }
+  });
 
 
 }
 
 
-
-
-
+var iconShow = document.getElementById("iconVisibl"),
+  iconHide = document.getElementById("iconHidden");
 function showPassword() {
   let x = document.getElementById("password");
   if (x.type === "password") {
     x.type = "text";
+    iconShow.classList.add("is-hidden");
+    iconHide.classList.remove("is-hidden");
   } else {
     x.type = "password";
+    iconShow.classList.remove("is-hidden");
+    iconHide.classList.add("is-hidden");
   }
-  $('.password__eye-icon').toggleClass('fa-eye fa-eye-slash');
 }
 
 
@@ -189,7 +209,7 @@ $(document).keyup(function (e) {
     if ($(".search-box__input").val() == '') {
       $(".search-box").removeClass("is-open");
     }
-    if ($('.appointment-popup-open').length > 0) {
+    if ($('.appointment-popup-is-open').length > 0) {
       closePopUp();
     }
   }
@@ -203,7 +223,7 @@ $(document).mouseup(function (e) {
     $(".search-box__input").val() == '') {
     $(".search-box").removeClass("is-open");
   }
-  if ($('.appointment-popup-open').length > 0
+  if ($('.appointment-popup-is-open').length > 0
     &&
     !$('.appointment-popup').is(e.target)
     &&
@@ -216,80 +236,110 @@ $(document).mouseup(function (e) {
 // calender initialization
 let events = [{
     title: 'Appointment',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-10T03:00:00',
     end: '2018-06-10T03:30:00'
   },
   {
     title: 'Appointment',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-05T12:30:00',
     end: '2018-06-05T13:00:00'
   },
   {
     title: 'Appointment',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-05T14:00:00',
     end: '2018-06-05T14:30:00'
   },
   {
     title: 'Appointment',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-13T13:30:00',
     end: '2018-06-13T14:00:00'
   },
   {
     title: 'Appointment',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-13T15:00:00',
     end: '2018-06-13T15:30:00'
   },
   {
     title: 'Appointment',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-13T20:30:00',
     end: '2018-06-13T21:00:00'
   },
   {
     title: 'Appointment',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-13T17:30:00',
     end: '2018-06-13T18:00:00'
   },
   {
     title: 'Appointment',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-13T19:00:00',
     end: '2018-06-13T19:30:00'
   },
   {
     title: 'Appointment',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-01T10:00:00',
     end: '2018-06-01T10:30:00'
   },
   {
     title: 'Appointment',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-01T11:00:00',
     end: '2018-06-01T11:30:00'
   },
   {
     title: 'Appointment',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-01T07:30:00',
     end: '2018-06-01T08:00:00'
   },
   {
     title: 'Appt.',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-15T09:30:00',
     end: '2018-06-15T10:00:00'
   },
   {
     title: 'Appt.',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-15T09:30:00',
     end: '2018-06-15T10:00:00'
   },
   {
     title: 'Appt.',
+    tel: '+201036675965',
+    procedure: 'Procedure',
     start: '2018-06-15T09:30:00',
     end: '2018-06-15T10:00:00'
   },
   {
-    title: 'Appointment',
-    start: '2018-06-04T07:30:00',
-    end: '2018-06-04T08:00:00'
+    title: 'Iyad Mohamed',
+    tel: '+201036675965',
+    procedure: 'Procedure',
+    start: '2018-06-04T07:30',
+    end: '2018-06-04T08:00'
   }
-];
+], eventStart, eventEnd, eventStartTime, eventEndTime, eventBackground;
 if ($('#calendar').length > 0) {
   $('#calendar').fullCalendar({
     titleFormate: {
@@ -316,35 +366,96 @@ if ($('#calendar').length > 0) {
       center: 'title',
       right: 'month,agendaWeek,agendaDay,list'
     },
-    // dayClick: function (date, jsEvent, view) {
-    //   $('.modal').modal('show');
-    // },
+    editable: true,
+    selectable: true,
+    select: function(start, end, allDay) {
+      if ($('#calendar').fullCalendar('getView').name === 'month') {
+        eventStart = moment(start).format() + 'T';
+        eventEnd = moment(start).format() + 'T';
+      } else {
+        eventStart = moment(start).format('YYYY-MM-DD hh:mm');
+        eventEnd = moment(end).format('YYYY-MM-DD hh:mm');
+      }
+      $('.modal').modal('show');
+   },
+   eventMouseover: function(event, jsEvent, view){
+     $(jsEvent.currentTarget).append(`<div class="tooltip tooltip--open">
+     <div class="tooltip__header">${event.title}</div>
+     <div class="tooltip__content">
+         <p>${event.tel}</p>
+         <p>${event.procedure}</p>
+     </div>
+   </div>`);
+   $('.tooltip').addClass('tooltip--open');
+   },
+   eventMouseout: function(event, jsEvent, view) {
+     $(jsEvent.currentTarget).children('.tooltip').remove();
+   },
+
     eventClick: function(calEvent, jsEvent, view) {
+      eventBackground = $(this).css('background-color');
       $(this).css('background-color','#175eb6');
       let today = $('#calendar').fullCalendar('getDate');
-      if (today.format('YYYY-MM-DD') === moment(calEvent.start).format('YYYY-MM-DD')){
-        $('.today-event').addClass('appointment-popup-open');
+      if (today.format('YYYY-MM-DD') === moment(calEvent.start).format('YYYY-MM-DD')) {
+        $('.today-event').addClass('appointment-popup-is-open');
+        $('body').addClass('is-not-overflowed');
       } else {
-        $('.future-event').addClass('appointment-popup-open');
+        $('.future-event').addClass('appointment-popup-is-open');
+        $('body').addClass('is-not-overflowed');
       }
     },
 
     allDaySlot: false,
-    slotEventOverlap:false, 
+    slotEventOverlap: false,
   });
 
-  $('.filter-link').click(
-    () => {
-      $('.filter-model').addClass('filter-show');
-    }
+  $('.filter-link').click(() => {
+    $('.filter-model').addClass('filter-show');
+  }
   );
 }
+
+// add events dynamically
+$('.modal-footer__add-event').click(
+  ()=> {
+    let addedEvent;
+    if ($('#calendar').fullCalendar('getView').name === 'month') {
+      eventStart = eventStart + $('.event-start-time').val().slice(0, 5);
+      eventEnd = eventEnd + $('.event-end-time').val().slice(0, 5);
+    }
+    addedEvent = {
+      title: 'Appointment',
+      start: eventStart,
+      end: eventEnd,
+      textColor: '#fff',
+      backgroundColor: '#0595ff',
+    };
+    events.push(addedEvent);
+    $('#calendar').fullCalendar('renderEvent', addedEvent);
+  }
+);
 
 function closePopUp() {
   $('.fc-event').filter(function() {
     if($(this).css("background-color") === 'rgb(23, 94, 182)'){
-      $(this).css('background-color', '#fc1299');
+      $(this).css('background-color', eventBackground);
     }
-});
-  $('.appointment-popup').removeClass('appointment-popup-open');
+  });
+  $('.appointment-popup').removeClass('appointment-popup-is-open');
+  $('body').removeClass('is-not-overflowed');
+}
+
+
+// notification responsive
+
+if ($("#open-noti").length > 0) {
+
+  $("#open-noti").click(function () {
+    $(".popup__container").toggleClass("pop-animate");
+  });
+
+}
+var editCard = $("#cloneAddressPanel").html();
+function cloneAddressPanel(elem) {
+  $(elem).parents(".panel").after(editCard);
 }

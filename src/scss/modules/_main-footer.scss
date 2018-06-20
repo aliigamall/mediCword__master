@@ -50,5 +50,20 @@
 .footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-bottom: rem(20);
+  text-align: center;
+  padding-bottom: 60px;
+  ul {
+    padding: 0;
+  }
+  @include breakpoint(mid){
+    padding-bottom: 0;
+  }
+}
+
+.footer-sticky {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
 }

@@ -17,8 +17,8 @@
 
 .filter-model{
     position: absolute;
-    //width: 300px;
-    top: 50px;
+    // width: rem(900);
+    top: 23px;
     right: 0;
     background-color: #fff;
     padding: 15px;
@@ -26,9 +26,9 @@
     z-index: 99;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     @include breakpoint(small){
-        width: 420px;
-        height: 180px;
-        padding: 25px;
+        width: rem(467);
+        // height: 180px;
+        padding: 10px 30px 0 25px;
         right: 0;
         background-color: #ffffff;
         cursor: default;
@@ -107,6 +107,13 @@
 .wrapper2 {
     display: flex;
     justify-content: space-between;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
 }
 
 .mdc-button {

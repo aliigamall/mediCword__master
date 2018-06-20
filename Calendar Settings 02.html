@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#000" />
-    <title>MediCrowd</title>
-    <link id="favicon" rel="shortcut icon" href="src/images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#000" />
+  <title>MediCrowd</title>
+  <link id="favicon" rel="shortcut icon" href="src/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
 
 <body>
-
     <header>
         <nav class="nav-bar">
           <svg class="nav-bar__logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 148.919 22.638"
@@ -130,174 +128,131 @@
           </div>
         </nav>
       </header>
-
   <main>
-    <!-- start notifications drop down -->
-    <div class="popup__container is-hidden">
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">Today</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Patient Reviews</div>
-          <div class="popup__date">Yesterday</div>
-        </div>
-        <div class="popup__content">2 new patient reviews, you can check them and give your feedback</div>
-        <a href="#" class="popup__link">Read the reviews</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">10/6/2018</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">Today</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">Yesterday</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-      <div class="popup">
-        <div class="rectangle"></div>
-        <div class="popup__header-container">
-          <div class="popup__header">New Favorites</div>
-          <div class="popup__date">Today</div>
-        </div>
-        <div class="popup__content">3 new patients added you to their fovorite doctors</div>
-        <a href="#" class="popup__link">Check the favorites</a>
-      </div>
-    </div>
-    <!-- end notifications drop down -->
-
-    <!-- start profile drop down -->
-    <div class="profile-drop-down is-hidden">
-      <ul class="drop-down">
-        <li class="drop-down__item">My Profile</li>
-        <li class="drop-down__item">Patients Reviews</li>
-        <li class="drop-down__item">Edit Password</li>
-        <li class="drop-down__item">My Specialities & Procedures</li>
-        <li class="drop-down__item">Added to Favorites </li>
-        <li class="drop-down__item">Logout</li>
-      </ul>
-    </div>
-    <!-- end profile drop down -->
-
-
     <div class="container-fluid">
       <ul class="breadcrumb">
         <li class="breadcrumb__item">
           <a href="">Dashboard</a>
         </li>
         <li class="breadcrumb__item breadcrumb__item--active">
-          <span>Patient Reviews</span>
+          <span>My Calendar</span>
         </li>
       </ul>
       <div class="page-title">
         <div class="page-title__header">
-          <h2>Patient Review</h2>
+          <h2>My Calendar</h2>
+          <h2 class="page-title__second-head">Book an appointment for your patient</h2>
         </div>
-        <form class="form">
-          <div class="l-form-group">
-          <select name="" class="form__input flex-end">
-            <option value="">My Boston</option>
-            <option value="">Wyoming</option>
-          </select>
-          </div>
-        </form>
       </div>
+      <div class="panel panel--radius">
+        <div class="choose-location">
+          <p class="typo-display5">Choose location</p>
+          <div class="choose-location__btns">
+            <button class="btn btn-light-grey btn-light-grey--black btn--h-40 btn--mr-20">My Boston</button>
+            <button class="btn btn-light-grey btn-light-grey--black btn--h-40">Work Loc 2</button>
+          </div>
+        </div>
+          <p class="typo-display4 typo-space">Specify your availability</p>
+          <form class="form">
+            <div class="l-form-group">
+              <label>Choose Dates</label>
+              <input class="calendar-pickup form__input form__input--w-215 form__input--h-40" type="text" placeholder="Today">
+            </div>
 
-    <div class="panel">
-      <div class="panel__wrapper">
-        <div>
-          <img src="src/images/USER.jpg" class="panel__image">
-        </div>
-        <div class="margin">
-          <h3 class="panel__title fs-25 panel__title--blue">Wonder Walf</h3>
-          <div class="panel__breif">The serivce overall is good somehow but it needs a more enhancement while the doctor is good and understand what does he is doing</div>
-          <a class="panel__action" href="#">Reply to feedback</a>
-        </div>
-        <div class="panel__rating-wrapper">
-          <div class="panel-rating">doctor's rating
-              <div class="rateYo"></div>
-          </div>
-          <div class="panel-rating">service's rating
-            <div class="rateYo"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="panel">
-        <div class="panel__wrapper">
+        <div class="l-form-group calender-cont calender-flex-between">
           <div class="">
-              <img src="src/images/USER.jpg" class="panel__image">
-              <svg xmlns="http://www.w3.org/2000/svg" class="panel-icon" id="Layer_1" data-name="Layer 1" viewBox="0 0 50 48.1">
-                <path class="cls-1" d="M42.56,1.09A14.15,14.15,0,0,0,25,6.78,14.15,14.15,0,0,0,7.44,1.09C-4.44,5.44-4.44,27,25,48.1,54.44,27,54.44,5.44,42.56,1.09"/>
+            <label>From</label>
+            <select class="form__input form__input--w-150 form__input--h-40">
+              <option>9:00 AM</option>
+            </select>
+          </div>
+          <div class="">
+            <label>To</label>
+            <select class="form__input form__input--w-150 form__input--h-40">
+              <option>9:00 AM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="l-form-group calender-cont">
+          <div class="calender-flex-between">
+            <label>Patient Name</label>
+            <span class="typo-display7">optional</span>
+          </div>
+            <input class="form__input form__input--md form__input--h-40" type="text" placeholder="Patient Name">
+        </div>
+
+        <div class="l-form-group calender-cont">
+          <div class="calender-flex-between">
+            <label>Patient Email</label>
+            <span class="typo-display7">optional</span>
+          </div>
+          <input class="form__input form__input--md form__input--h-40" type="text" placeholder="Patient Email">
+        </div>
+
+        <div class="l-form-group calender-cont">
+          <div class="calender-flex-between">
+            <label>Patient Mobile Number</label>
+            <span class="typo-display7">optional</span>
+          </div>
+          <input class="form__input form__input--md form__input--h-40" type="tel" placeholder="+96650908715">
+        </div>
+
+        <div class="l-form-group wrapper4">
+          <label>Patient Gender: </label>
+            <div class="checkbox">
+              <div class="mdc-radio">
+                <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked="">
+                <div class="mdc-radio__background">
+                  <div class="mdc-radio__outer-circle"></div>
+                  <div class="mdc-radio__inner-circle"></div>
+                </div>
+              </div>
+              <label for="radio-1" class="checkbox-option">Male</label>
+            </div>
+            <div class="checkbox">
+              <div class="mdc-radio mdc-form-field">
+                <input class="mdc-radio__native-control" type="radio" id="radio-2" name="radios" checked="">
+                <div class="mdc-radio__background">
+                  <div class="mdc-radio__outer-circle"></div>
+                  <div class="mdc-radio__inner-circle"></div>
+                </div>
+              </div>
+              <label for="radio-2" class="checkbox-option">Female</p>
+            </div>
+        </div>
+
+        <div class="l-form-group">
+        <div class="mdc-form-field m-b">
+          <div class="mdc-checkbox">
+            <input type="checkbox" id="attachements-checkbox" class="mdc-checkbox__native-control">
+            <div class="mdc-checkbox__background">
+              <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
               </svg>
-            </div>
-          <div class="margin">
-            <h3 class="panel__title fs-25 panel__title--blue">Jack Bolt</h3>
-            <div class="panel__breif">
-              <p>The serivce overall is good somehow but it needs a more enhancement while the doctor is good and understand what does he is doing The serivce overall is good somehow but it needs a more enhancement while the dos doing The serivce overall is good somehow but it needs a more enhancement while the doctor is good and understand what does he is doing The serivce overall is good somehow but it needs a more enhancement while the dos doing ds a more enhancement</p>
-            </div>
-            <a class="panel__action" href="#">Reply to feedback</a>
-          </div>
-          <div class="panel__rating-wrapper">
-            <div class="panel-rating">doctor's rating
-                <div class="rateYo"></div>
-            </div>
-            <div class="panel-rating">service's rating
-              <div class="rateYo"></div>
+              <div class="mdc-checkbox__mixedmark"></div>
             </div>
           </div>
+
+          <label for="attachements-checkbox">Send the link of the app the patient to get the benefits of MediCrowd</label>
         </div>
+
       </div>
-      <div class="panel">
-        <div class="panel__wrapper">
-          <div>
-            <img src="src/images/USER.jpg" class="panel__image">
-          </div>
-          <div class="margin">
-            <h3 class="panel__title fs-25 panel__title--blue">Wonder Walf</h3>
-            <div class="panel__breif">The serivce overall is good somehow but it needs a more enhancement while the doctor is good and understand what does he is doing</div>
-            <a class="panel__action" href="#">Reply to feedback</a>
-          </div>
-          <div class="panel__rating-wrapper">
-            <div class="panel-rating">doctor's rating
-                <div class="rateYo"></div>
-            </div>
-            <div class="panel-rating">service's rating
-              <div class="rateYo"></div>
-            </div>
-          </div>
+      <div class="add">
+        <div class="add-icon-container">
+          <svg class="add__icon">
+            <use xlink:href="src/images/svg-icons2.svg#icon-add"></use>
+          </svg>
         </div>
+        <p class="typo-display5 add__text">Book another Appointment</p>
       </div>
+      <button class="btn btn-submit btn-primary2 btn-primary2--top-0">Save and Continue</button>
     </div>
+
   </main>
 
   <footer>
-    <div class="main-footer">
+    <div class="footer">
       <ul class="typo-display5 u-text-center">
         <li>
           <a href="#">Terms of Use</a>
@@ -322,10 +277,11 @@
       <p class="typo-display5 u-text-center">Copyrights 2018, MediCrowd, All rights reserved.</p>
     </div>
   </footer>
-  <script src="/src/scripts/jquery.min.js"></script>
-  <script src="/src/scripts/jquery.rateyo.min.js"></script>
-  <script src="/src/scripts/scripts.js"></script>
+
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./src/scripts/scripts.js"></script>
+
 </body>
 
 </html>

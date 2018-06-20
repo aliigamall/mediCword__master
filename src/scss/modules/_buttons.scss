@@ -106,10 +106,14 @@
     height: 50px;
   }
   &--h-40{
-    height: 40px;
+    height: 45px;
   }
   &--full-width{
     width: 100%;
+    font-size: rem(18);
+  }
+  &--mr-20 {
+    margin-right: rem(20);
   }
 }
 
@@ -123,29 +127,45 @@
   color: #fff;
 }
 
+.btn-light-grey {
+  background-color: #d9d9d9;
+  font-size: rem(14);
+  // height: rem(30);
+  color: #fff;
+  box-shadow: 0 0 0 0;
+
+  &--black {
+    color: black;
+  }
+}
+
 .btn-submit {
   background: $color-primary1;
   width: 100%;
   height: rem(50);
-  margin: rem(16) 0;
+  margin: rem(12) 0 rem(24) 0;
   color: $color-white;
   line-height: 1.25;
   font-size: rem(20);
 }
 
 .btn-deactivate {
-  background: $color-grey;
+  background-color: $color-grey;
   font-size: rem(14);
   height: rem(30);
   // margin-right: rem(25);
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);
   color: #fff;
+
+  &--mr {
+    margin-right: rem(30);
+  }
 }
 
 .btn-primary {
-  background: $light-blue;
-  font-size: rem(14);
-  height: rem(30);
+  background: #17acf8;
+  // font-size: rem(14);
+  // height: rem(30);
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);
   margin-top: rem(20);
   margin-bottom: rem(20);
@@ -161,17 +181,19 @@
 
 .btn-secondary {
   background: $color-primary1;
-  font-size: rem(14);
+  font-size: rem(15);
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);
   margin-top: rem(20);
-  margin-bottom: rem(20);
+  // margin-bottom: rem(40);
   color: #fff;
+  border: none;
 }
 
 .btn-blank {
+  font-size: rem(15);
   background: transparent;
   margin-top: rem(20);
-  margin-bottom: rem(20);
+  margin-bottom: rem(40);
   color: #fff;
   color: #000;
   box-shadow: 0 0 0 0;
@@ -180,9 +202,11 @@
 .btn-border{
   border: solid 1px #c4c4c4;
   margin-top: rem(20);
-  margin-bottom: rem(20);
-  height: 40px;
-  width: 75px;
+  // margin-bottom: rem(20);
+  margin-left: rem(17);
+  // height: 40px;
+  // width: 75px;
+  box-shadow: 0 0 0 0;
 }
 
 .btn-m-top{
@@ -190,8 +214,12 @@
 }
 
 .btn--lg{
-  width: 445px;
+  margin-top: 50px;
   height: 50px;
+  width: 100%;
+  @media (min-width:576px) {
+    width: 445px;
+  }
 }
 
 // .container {
@@ -208,10 +236,9 @@
 .btn-primary2 {
   background: $light-blue;
   font-size: rem(14);
-  height: 50px;
   box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);
   margin-top: rem(20);
-  font-size: 20px;
+  font-size: rem(20);
   color: #ffffff;
   &--top-0{
     margin-top: 0;

@@ -15,7 +15,7 @@
   @include transition();
 }
 
-.appointment-popup-open {
+.appointment-popup-is-open {
   opacity: 1;
   visibility: visible;
   @include translate(0, 0);
@@ -54,4 +54,9 @@
 
 .appointment-popup__footer {
   margin-top: rem(10);
+}
+
+.is-not-overflowed {
+  height: 100vh;
+  overflow: hidden;
 }

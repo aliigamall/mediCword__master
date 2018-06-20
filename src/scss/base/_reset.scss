@@ -144,8 +144,12 @@ svg:not(:root) {
 
 
 
-input {
+input,
+textarea {
   outline: none;
+}
+textarea {
+  resize: none;
 }
 
 // .row {
@@ -157,8 +161,31 @@ button:focus {
   outline: none;
 }
 
+// select::-ms-expand {
+//   display: none;
+// }
+
+select {
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // text-indent: 1px;
+  // text-overflow: '';
+  // background: transparent;
+  // padding-right: 50px;
+  // background: url(../src/images/down-arrow.svg)  no-repeat right 8% top 50%;
+  // background-size: rem(17);
+
+//   -webkit-appearance: none;
+//    -moz-appearance: none;
+//    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="5px" viewBox="7 10 10 5" version="1.1"> <polygon id="Shape" stroke="none" fill="%230" fill-rule="evenodd" opacity="0.54" points="7 10 12 15 17 10"/> </svg>') no-repeat calc(100% - 15px) center white;
+//    padding:0 30px 0 15px;
+}
+
 select:focus {
   outline: none;
+}
+select:invalid {
+  color: #495057;
 }
 
 li {
@@ -170,7 +197,7 @@ li {
   }
 }
 
-p {
+p,h2 {
   margin: 0;
 }
 
@@ -179,7 +206,9 @@ p {
 // }
 
 .container-fluid {
-  padding: 0 rem(70);
+  @include breakpoint (mid) {
+    padding: 0 rem(70);
+  }
 }
 // .container{
 //   width: 100%;

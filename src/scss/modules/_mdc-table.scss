@@ -5,13 +5,14 @@
 box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 background-color: #ffffff;
 border: solid 1px #ffffff;
-margin-top: rem(33);
+margin-bottom: rem(30);
+// padding-right: rem(100);
 overflow: auto;
 }
 .mdc-table {
   padding: 0;
   position: relative;
-  width: 100%;
+  width: 90%;
   font-weight: 500;
   font-size: 13px;
   color: #606060;
@@ -19,7 +20,7 @@ overflow: auto;
   min-width: 600px;
   th {
       font-family: Roboto;
-      font-size: 19px;
+      font-size: rem(18);
       font-weight: normal;
       font-style: normal;
       font-stretch: normal;
@@ -27,7 +28,7 @@ overflow: auto;
       padding: 20px 190px 30px 20px;
       letter-spacing: normal;
       text-align: left;
-      color: #fc1298;
+      color: $color-primary1;
       &:last-child{
           padding-right: 40px;
       }

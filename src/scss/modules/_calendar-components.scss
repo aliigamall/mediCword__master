@@ -1,14 +1,6 @@
 .calendar-pickup {
-    width: 214.2px;
-    height: 40px;
-    border-radius: 35px;
-    background-color: #ffffff;
-    border: solid 1px #c4c4c4;
-    padding: 10px 20px;
     background: url(../images/date.svg) no-repeat right 8% top 50%;
-    svg{
-        fill: #c4c4c4;
-    }
+    background-size: rem(17);
 }
 
 .pickup-time{
@@ -30,6 +22,14 @@
     @include breakpoint(small){
         flex-wrap: nowrap;
     }
+}
+
+.calender-cont {
+    max-width: 340px;
+}
+
+.calender-flex-between--sm {
+  width: 20%;
 }
 
 .pickup-time__text {
@@ -75,11 +75,11 @@
     margin-top: 23px;
 }
 
-.calendar-content__flex{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
+// .calendar-content__flex{
+//     display: flex;
+//     flex-wrap: nowrap;
+//     justify-content: space-between;
+// }
 
 .calendar-content__text{
     font-size: rem(17);
@@ -92,6 +92,11 @@
     flex-wrap: nowrap;
     flex-direction: row;
     padding: 0 35px;
+    text-decoration: none;
+    margin-bottom: rem(20);
+    &:hover {
+      text-decoration: none;
+    }
 }
 
 .add-icon-container{
@@ -102,13 +107,13 @@
     border-radius: 50%;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     background-color: $dark-blue;
-    width: 30px;
-    height: 30px;
+    width: 27px;
+    height: 27px;
     svg{
         
         width: 16px;
         //height: 12px;
-        fill: $body-bg-color;
+        fill: $color-light-blue;
     }
 }
 
@@ -121,3 +126,46 @@
     font-size: rem(20);
     margin-top: 40px;
 }
+
+.booking-per-slot {
+
+  li {
+    width: rem(70);
+    height: rem(40);
+    position: relative;
+    margin-right: 10px;
+  }
+}
+
+.booking-per-slot__slot-btn {
+  opacity: 0;
+  display: block
+}
+
+.booking-per-slot__slot-btn,
+.booking-per-slot__slot-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.booking-per-slot__slot-label {
+  border-radius: rem(35);
+  border: 1px solid #c4c4c4;
+  font-size: rem(15);
+  cursor: pointer;
+  @include transition();
+}
+
+.booking-per-slot__slot-btn:checked + label{
+background: $color-primary1;
+border: none;
+  color: #fff;
+}
+
+.booking-per-slot__slot-label{
+  text-align: center;
+  padding-top: 6px;
+  margin: 0;
+} 

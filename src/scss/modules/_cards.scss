@@ -384,7 +384,11 @@
   transition: all .2s ease-in-out;
   text-decoration: none;
   cursor: pointer;
-
+  &--main{
+    width: 256px;
+    height: 218px;
+    margin-bottom: 80px;
+  }
   &:hover {
     background: $color-primary1;
     color: $color-white;
@@ -400,4 +404,13 @@
   width: rem(45);
   height: rem(57);
   margin-bottom: rem(20);
+}
+
+.main-page-text{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.main-page-logo {
+  padding-top: 30px;
 }

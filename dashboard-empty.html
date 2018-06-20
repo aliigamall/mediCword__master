@@ -22,34 +22,40 @@
           <div class="nav-bar__end-group">
             <div class="search-box">
               <span class="search-box__btn" onclick="openSearchBox()">
-              <svg xmlns="http://www.w3.org/2000/svg" class="search-box__icon">
-                <use xlink:href="src/images/svg-icons.svg#icon-search"></use>
-              </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="search-box__icon">
+                  <use xlink:href="src/images/svg-icons.svg#icon-search"></use>
+                </svg>
               </span>
               <input type="text" placeholder="Search in the website" class="search-box__input">
             </div>
             <ul class="nav-bar__menu">
               <li class="nav-bar__menu-item">
-                <svg class="nav-bar__menu-link-icon">
-                  <use xlink:href="src/images/svg-icons.svg#icon-calendar"></use>
-                </svg>
-                <a href="#0" class="nav-bar__menu-link">My Calendar</a>
+                <a href="#0" class="nav-bar__menu-link">
+                  <span class="hidden-md-only">My Calendar</span>
+                  <svg class="nav-bar__menu-link-icon">
+                      <use xlink:href="src/images/svg-icons.svg#icon-calendar"></use>
+                    </svg>
+                </a>
               </li>
               <li class="nav-bar__menu-item">
-                <svg class="nav-bar__menu-link-icon">
-                  <use xlink:href="src/images/svg-icons.svg#icon-wallet"></use>
-                </svg>
-                <a href="#0" class="nav-bar__menu-link">My wallet</a>
+                <a href="#0" class="nav-bar__menu-link">
+                  <span class="hidden-md-only" >My wallet</span>
+                  <svg class="nav-bar__menu-link-icon">
+                      <use xlink:href="src/images/svg-icons.svg#icon-wallet"></use>
+                    </svg>
+                </a>
               </li>
               <li class="nav-bar__menu-item">
-                <svg class="nav-bar__menu-link-icon">
-                  <use xlink:href="src/images/svg-icons.svg#icon-notifications"></use>
-                </svg>
-                <a href="#0" class="nav-bar__menu-link">Notification</a>
-                <div class="popup__container">
+                <a href="#0" class="nav-bar__menu-link">
+                  <span class="hidden-md-only">Notification</span>
+                  <svg class="nav-bar__menu-link-icon">
+                    <use xlink:href="src/images/svg-icons.svg#icon-notifications"></use>
+                  </svg>
+                </a>
+                <div class="popup__container popup__container--height">
                   <div class="popup">
                     <div class="rectangle"></div>
-                    <div class="popup__header-container">
+                    <div class="popup__header-wrapper">
                       <div class="popup__header">New Favorites</div>
                       <div class="popup__date">Today</div>
                     </div>
@@ -58,7 +64,7 @@
                   </div>
                   <div class="popup">
                     <div class="rectangle"></div>
-                    <div class="popup__header-container">
+                    <div class="popup__header-wrapper">
                       <div class="popup__header">New Patient Reviews</div>
                       <div class="popup__date">Yesterday</div>
                     </div>
@@ -67,7 +73,7 @@
                   </div>
                   <div class="popup">
                     <div class="rectangle"></div>
-                    <div class="popup__header-container">
+                    <div class="popup__header-wrapper">
                       <div class="popup__header">New Favorites</div>
                       <div class="popup__date">10/6/2018</div>
                     </div>
@@ -76,7 +82,7 @@
                   </div>
                   <div class="popup">
                     <div class="rectangle"></div>
-                    <div class="popup__header-container">
+                    <div class="popup__header-wrapper">
                       <div class="popup__header">New Favorites</div>
                       <div class="popup__date">Today</div>
                     </div>
@@ -85,7 +91,7 @@
                   </div>
                   <div class="popup">
                     <div class="rectangle"></div>
-                    <div class="popup__header-container">
+                    <div class="popup__header-wrapper">
                       <div class="popup__header">New Favorites</div>
                       <div class="popup__date">Yesterday</div>
                     </div>
@@ -94,7 +100,7 @@
                   </div>
                   <div class="popup">
                     <div class="rectangle"></div>
-                    <div class="popup__header-container">
+                    <div class="popup__header-wrapper">
                       <div class="popup__header">New Favorites</div>
                       <div class="popup__date">Today</div>
                     </div>
@@ -106,8 +112,8 @@
             </ul>
             <div class="nav-bar__profile">
               <img class="nav-bar__profile-pic" src="src/images/profile-pic.jpg" alt="">
-              <span>Dr. Footerage Pork</span>
-              <span>Dentist</span>
+              <span class="hidden-md-only">Dr. Footerage Pork</span>
+              <span class="hidden-md-only">Dentist</span>
               <div class="nav-bar__profile-drop-down">
                 <ul class="drop-down">
                   <li class="drop-down__item">My Profile</li>
@@ -120,7 +126,6 @@
               </div>
             </div>
           </div>
-    
         </nav>
       </header>
   <main>
@@ -134,7 +139,7 @@
       <!-- end header -->
 
       <!-- start 3 cards -->
-      <div class="container">
+      <div class="wrapper">
         <div class="brief">Welcome Dr. Footerage to your account in MediCrowd, please complete your profile to be able to use MedciCrowd.</div>
           <button class="btn btn-primary btn--lg">Complete My Profile</button>
       </div>

@@ -1,8 +1,11 @@
 .blocks{
-    padding: 0 30px;
+    padding: 0;
     margin-top: 15px;
     &--top{
         margin-top: 50px;
+    }
+    @include breakpoint(mid) {
+        padding:0 33px; 
     }
 }
 
@@ -18,13 +21,13 @@
 
 .calendar-block__num{
     color: $color-primary1;
-    font-size: rem(25);
+    font-size: rem(23);
     font-weight: bold;
 }
 
 .calendar-block__icon{
     color: $color-green;
-    font-size: rem(13);
+    font-size: rem(12);
     font-weight: bold;
 }
 

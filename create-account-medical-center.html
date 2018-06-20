@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#000" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>MediCrowd-Create Account Medical Centers</title>
+ <title>MediCrowd-Create Account Medical Centers</title>
   <link id="favicon" rel="shortcut icon" href="src/images/favicon.png" type="image/png">
   <link rel="stylesheet" href="src/css/style.css">
 </head>
@@ -15,7 +14,7 @@
 <body>
   <main>
 
-  <div class="row">
+  <div class="row l-row-0">
 
     <!-- start cover image -->
     <div class="d-none d-md-block col-md-5 u-pl-0">
@@ -33,65 +32,91 @@
       <form class="form">
         <p class="form__into-text"> Welcome, Create your account with MediCrowd and expand your network.</p>
 
-        <div class="l-form-group">
+        <div>
             <label>Medical Center Name</label>
-            <input type="text" class="form__input" placeholder="Medical Center Name">
-        </div>
+            <input type="text" class="form__input full-width form__input h-50" placeholder="Medical Center Name">
+          </div>
 
         <label style="display:block">Choose The Type</label>
-        <div class="row">
-          
-          <div class="col-lg u-pl-0 l-form-group radiobutton">
-            <input type="radio" id="radioBtn">
-            <label for="radioBtn" class="typo-display3">Laboratory</label>
+        <div class="row l-row-0">
+          <div class="col-lg u-pl-0 l-form-group">
+            <div class="checkbox">
+              <div class="mdc-radio">
+                <input class="mdc-radio__native-control" checked="" type="radio" id="radio-1" name="radios">
+                <div class="mdc-radio__background">
+                  <div class="mdc-radio__outer-circle"></div>
+                  <div class="mdc-radio__inner-circle"></div>
+                </div>
+              </div>
+              <label for="radio-1" class="checkbox-option">Laboratory</label>
+            </div>
           </div>
-
-          <div class="col-lg u-pr-0 l-form-group radiobutton">
-            <input type="radio" id="radioBtn2">
-            <label for="radioBtn2" class="typo-display3">Laboratory & Ray</label>
+          <div class="col-lg u-pl-0 l-form-group">
+            <div class="checkbox">
+              <div class="mdc-radio">
+                <input class="mdc-radio__native-control" checked="" type="radio" id="radio-2" name="radios">
+                <div class="mdc-radio__background">
+                  <div class="mdc-radio__outer-circle"></div>
+                  <div class="mdc-radio__inner-circle"></div>
+                </div>
+              </div>
+              <label for="radio-2" class="checkbox-option">Laboratory &amp; Ray</label>
+            </div>
           </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg u-pl-0">
-              <div class="l-form-group">
-                <label>Your First Name</label>
-                <input type="text" class="form__input" placeholder="Jack">
-              </div>
-            </div>
 
-            <div class="col-lg u-pr-0">
-              <div class="l-form-group">
-                <label>Your Last Name</label>
-                <input type="text" class="form__input" placeholder="Walsh">
-              </div>
+        <div class="flex">
+            <div class="col u-pl-0 padding-right">
+              <label>First Name</label>
+              <input type="text" class="form__input full-width form__input h-50" placeholder="Jack">
+            </div>
+            <div class="col u-pl-0">
+              <label>Last Name</label>
+              <input type="text" class="form__input full-width form__input h-50" placeholder="Walsh">
             </div>
           </div>
 
-        <div class="l-form-group">
-            <label>Your Email</label>
-            <input type="email" class="form__input" placeholder="youremail@mail.com">
-        </div>
+          <div>
+              <label>Your Email</label>
+              <input type="text" class="form__input full-width form__input h-50" placeholder="youremail@mail.com">
+            </div>
 
         <div class="l-form-group">
           <label>Create Your Password</label>
-          <div class="form__input form__input--password">
+          <div class="form__input form__input--password h-50">
             <input type="password" id="password" placeholder="Enter your password">
-            <i class="fa fa-eye password__eye-icon" onclick="showPassword()"></i>
+            <i class="password__eye-icon" >
+              <svg xmlns="http://www.w3.org/2000/svg" onclick="showPassword()" id="iconVisibl" class="">
+                <use xlink:href="src/images/svg-icons2.svg#icon-visibility"></use>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" onclick="showPassword()" id="iconHidden" class="is-hidden">
+                <use xlink:href="src/images/svg-icons2.svg#icon-hidden"></use>
+              </svg>
+            </i>
           </div>
         </div>
 
-        <div class="l-form-group">
+        <div>
             <label>Your Phone Number</label>
-            <input type="tel" class="form__input" placeholder="+ 1 281 712161">
+            <input type="text" class="form__input full-width form__input h-50" placeholder="+ 44 281 712161">
           </div>
 
-        <div class="l-form-group">
-          <div class="mdc-checkbox mdc-checkbox--pink">
-            <input type="checkbox" id="checkBox">
-            <label for="checkBox">I agree with <a href="#" class="u-light-blue">terms and conditions</a></label>
+          <div class="mdc-form-field m-b">
+            <div class="mdc-checkbox">
+              <input type="checkbox" id="attachements-checkbox" class="mdc-checkbox__native-control">
+              <div class="mdc-checkbox__background">
+                <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                  <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                </svg>
+                <div class="mdc-checkbox__mixedmark"></div>
+              </div>
+            </div>
+
+            <label for="attachements-checkbox">I agree with
+              <a href="" class="clr-blue">terms and conditions</a>
+            </label>
           </div>
-        </div>
 
         <div class="submit-btn">
           <button class="btn btn-submit typo-submit" type="submit">Create Your Account</button>
@@ -107,5 +132,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./src/scripts/scripts.js"></script>
 </body>
+
+<script>
+
+</script>
+
 
 </html>
