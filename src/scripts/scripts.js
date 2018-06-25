@@ -339,7 +339,7 @@ let events = [{
     start: '2018-06-04T07:30',
     end: '2018-06-04T08:00'
   }
-], eventStart, eventEnd, eventStartTime, eventEndTime, eventBackground;
+], eventStart, eventEnd, eventStartTime, eventEndTime, eventBackground, tooltip, $tooltip;
 if ($('#calendar').length > 0) {
   $('#calendar').fullCalendar({
     titleFormate: {
@@ -366,7 +366,6 @@ if ($('#calendar').length > 0) {
       center: 'title',
       right: 'month,agendaWeek,agendaDay,list'
     },
-    editable: true,
     selectable: true,
     select: function(start, end, allDay) {
       if ($('#calendar').fullCalendar('getView').name === 'month') {
@@ -379,17 +378,27 @@ if ($('#calendar').length > 0) {
       $('.modal').modal('show');
    },
    eventMouseover: function(event, jsEvent, view){
-     $(jsEvent.currentTarget).append(`<div class="tooltip tooltip--open">
-     <div class="tooltip__header">${event.title}</div>
-     <div class="tooltip__content">
-         <p>${event.tel}</p>
-         <p>${event.procedure}</p>
-     </div>
-   </div>`);
-   $('.tooltip').addClass('tooltip--open');
+    tooltip = `<div class="tooltip">
+    <div class="tooltip__header">${event.title}</div>
+    <div class="tooltip__content">
+        <p>${event.tel}</p>
+        <p>${event.procedure}</p>
+    </div>
+  </div>`
+    $tooltip = $(tooltip).appendTo('body');
+
+  $(this).mouseover(function(e) {
+    $(this).css('z-index', 10000);
+    $tooltip.fadeIn('500');
+    $tooltip.fadeTo('10', 1.9);
+  }).mousemove(function(e) {
+    $tooltip.css('top', e.pageY + 10);
+    $tooltip.css('left', e.pageX + 20);
+});
    },
    eventMouseout: function(event, jsEvent, view) {
-     $(jsEvent.currentTarget).children('.tooltip').remove();
+    $(this).css('z-index', 8);
+    $('.tooltip').remove();
    },
 
     eventClick: function(calEvent, jsEvent, view) {
@@ -432,6 +441,7 @@ $('.modal-footer__add-event').click(
     };
     events.push(addedEvent);
     $('#calendar').fullCalendar('renderEvent', addedEvent);
+    $('.modal').modal('hide');
   }
 );
 
@@ -455,7 +465,114 @@ if ($("#open-noti").length > 0) {
   });
 
 }
-var editCard = $("#cloneAddressPanel").html();
+
+// edit card
+
+var cloneCard = $("#cloneAddressPanel").html();
 function cloneAddressPanel(elem) {
-  $(elem).parents(".panel").after(editCard);
+  $(elem).parents(".panel").after(cloneCard);
 }
+
+var btnEdit = $(".edit-btn");
+btnEdit.click(function(){
+  var arr = $(this).parent().siblings().children()
+  .children(".text-transform").children("p");
+ 
+  $(".text-edit__icons").toggleClass("is-hidden");
+  $(".text-transform p").toggleClass("is-hidden");
+  
+  if(!$(".text-transform p").hasClass("is-hidden")){
+    $("input").remove();
+  }else {
+    for (let i = 0; i < arr.length; i++) {
+      let textVal = arr[i].innerHTML;
+      $(".text-transform")[i].innerHTML += "<input type='text' value='"+ textVal +"'/>";
+
+    }
+  }
+
+});
+
+var btnEdit2 = $(".edit-btn2");
+
+btnEdit2.click(function(){
+  var arr = $(this).parent().siblings().children()
+  .children().children().children("p");
+
+  $(".text-edit__icons2").toggleClass("is-hidden");
+  $(".text-transform2 p").toggleClass("is-hidden");
+
+  if(!$(".text-transform2 p").hasClass("is-hidden")){
+    $("input").remove();
+  }else {
+    //$(".text-transform2").append("<input type='text' />");
+    for (let i = 0; i < arr.length; i++) {
+      let textVal = arr[i].innerHTML;
+      $(".text-transform2")[i].innerHTML += "<input type='text' value='"+ textVal +"'/>";
+
+    }
+  }
+  
+});
+
+var btnEdit3 = $(".edit-btn3");
+
+btnEdit3.click(function(){
+  var arr4 = $(this).parent().siblings().children()
+  .children().children().children("p");
+  
+  $(".text-edit__icons3").toggleClass("is-hidden");
+  $(".text-transform3 p").toggleClass("is-hidden");
+
+  if(!$(".text-transform3 p").hasClass("is-hidden")){
+    $("input").remove();
+  }else {
+    //$(".text-transform3").append("<input type='text' />");
+    for (let i = 0; i < arr4.length; i++) {
+      let textVal = arr4[i].innerHTML;
+      $(".text-transform3")[i].innerHTML += "<input type='text' value='"+ textVal +"'/>";
+
+    }
+  }
+  
+});
+
+
+var btnEdit4 = $(".edit-btn4");
+
+btnEdit4.click(function(){
+  var arr4 = $(this).parent().siblings().children()
+  .children().children().children("p");
+  
+  $(".text-edit__icons4").toggleClass("is-hidden");
+  $(".text-transform4 p").toggleClass("is-hidden");
+
+  if(!$(".text-transform4 p").hasClass("is-hidden")){
+    $("input").remove();
+  }else {
+    for (let i = 0; i < arr4.length; i++) {
+      let textVal = arr4[i].innerHTML;
+      $(".text-transform4")[i].innerHTML += "<input type='text' value='"+ textVal +"'/>";
+
+    }
+  }
+  
+});
+
+  var iconClose = $(".icon-close"),
+      iconDone  = $(".icon-done");
+
+  iconClose.click(function(){
+    $(this).parent().siblings("div").children("p").removeClass("is-hidden")
+    .siblings("input").addClass("is-hidden");
+    $(this).parent().addClass("is-hidden");
+  });
+
+  iconDone.click(function(){
+    var inputVal = $(this).parent().siblings("div").children("input").val();
+    //alert(inputVal);
+    $(this).parent().siblings("div").html("<p> "+ inputVal +" </p>");
+    $(this).parent().addClass("is-hidden");
+  });
+
+

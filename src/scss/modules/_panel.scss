@@ -495,3 +495,14 @@
 //   font-size: 20px;
 //   color: #ffffff;
 // }
+
+
+.text-edit {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: auto;
+  p{
+    margin-right: 20px;
+  }
+}
